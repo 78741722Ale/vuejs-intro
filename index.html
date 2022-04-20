@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue intro</title>
+
+    <style>
+        .text-red {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Questo sarà il DIV principale per sempre, perche ha
+    l'elemento radice e tutto (main,header,footer) finira
+    tutto li dentro -->
+
+    <!-- app è l'id elemento radice, tutto ciò che sta qui
+    dentro viene gestito da Vue tramite la radice, se vogliamo
+    gestire fuori qualcosa bisogna esportarlo da questo div -->
+    <div id="app">
+        <h1>{{ Greetings }}</h1>
+        <p>{{ text }}</p>
+        <!-- Codice jS -->
+        <!-- {{ message }} -->
+        <input type="text" v-model="userName"> <!-- Questa è una direttiva vueJS, grazie al v-model-->
+        <!-- V-bing directive -->
+        <h2 v-bind:class="css_classes"> Direttiva v-bind estesa </h2> <!-- V-bind estesa -->
+        <h2 :class="css_classes">Direttiva v-bind Contratta</h2> <!-- V-bind Contratta -->
+        <!-- V-on , direttiva estesa -->
+        <button v-on:click="counter += 1">Clicca</button>
+        <p>Il bottone è stato cliccato {{counter}} volte</p>
+        <!-- V-on , direttiva contratta :  @evento="funzione_invocata" -->
+        <button @click="incrementCounter()">Clicca</button>
+        <p>Il bottone è stato cliccato {{counter}} volte</p>
+    </div>
+
+
+    <!-- Hello Vue -->
+
+    <!-- Link a VueJS -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <!-- Link al file JS principale, d'ora in poi Main === app.js -->
+    <script src="./assets/app.js"></script>
+</body>
+</html>
