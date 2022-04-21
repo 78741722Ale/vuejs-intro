@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live coding</title>
+    <!-- Link a foglio di style -->
+    <link rel='stylesheet' href='./style.css'>
+</head>
+<body>
+    
+    <!-- Link a div con ID Principale -->
+    <div id="app">
+        <!-- live 1 -->
+        <!-- <ul>
+            <li v-for="nome in nomi">{{nome}}</li>
+        </ul> -->
+        <!-- live 2 -->
+        <!-- <ul>
+            <li v-for="number in 100">{{number}}</li>
+        </ul> -->
+        <!-- Live 3 -->
+        <h1>{{movie.title}}</h1>
+        <div class="container">
+            <div class="card">
+                <img :src="movie.images[0]" alt="">
+                <h3>{{movie.title}}</h3>
+                <div>Category: {{movie.category}}</div>
+                <small>Lenght: {{movie.length}}</small>
+            </div>
+        </div>
+    </div>
+    <!-- Link a Vue -->
+    <script src='https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js'></script>
+    <!-- Link a JS -->
+    <script src='./app.js'></script>
+</body>
+</html>
